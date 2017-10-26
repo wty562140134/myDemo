@@ -3,6 +3,9 @@ package reflectDemo;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
+import reflectDemo.reflect.reflectTestClass;
+import reflectDemo.reflect.reflectTestClass1;
+
 public class callFunction {
 
 	/**
@@ -77,4 +80,8 @@ public class callFunction {
 		return clazzs;
 	}
 
+	public static void main(String[] args) {
+		callFunction call = new callFunction();
+		call.invokeFunction(reflectTestClass1.class, "eat", true, "apple");
+	}
 }
