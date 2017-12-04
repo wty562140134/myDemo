@@ -15,8 +15,8 @@ public class reflectTestClass {
 		this.publicName = publicName;
 	}
 
-	private void print(String printStr) {
-		System.out.println(printStr);
+	public <T> void print(T args) {
+		System.out.println(args);
 	}
 
 	private void showSelf() {

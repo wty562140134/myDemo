@@ -15,7 +15,7 @@ public class reflectTestClass1 {
 	}
 
 	private void eat(String food) {
-		System.out.println(this.name + "eat" + food);
+		System.out.println(this.name + " " + "eat" + " " + food);
 	}
 
 	public void setName(String name) {

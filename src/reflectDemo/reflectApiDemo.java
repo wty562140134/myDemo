@@ -7,6 +7,7 @@ import reflectDemo.reflect.reflectTestClass;
 public class reflectApiDemo {
 
 	public static void main(String[] args) {
+		ClassLoader classs;
 		// 参考http://blog.csdn.net/coslay/article/details/38084343
 		/** 获取类的方式 */
 		/* 获取类方式1 */
