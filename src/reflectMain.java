@@ -1,20 +1,20 @@
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 
-import reflectDemo.callFunction;
+import reflectDemo.reflectSimpleDemo;
 import reflectDemo.reflect.reflectTestClass;
 
 public class reflectMain {
 
 	public void myinvoken(Class<?> invokenClass, String invokenFunctionName,
 			Boolean isPrivate, Object... params) {
-		Class<callFunction> callClass = callFunction.class;
+		Class<reflectSimpleDemo> callClass = reflectSimpleDemo.class;
 		Method method = getInvokenMethod(callClass);
 		invokenFun(callClass, method, invokenClass, invokenFunctionName,
 				isPrivate, params);
 	}
 
-	public Method getInvokenMethod(Class<callFunction> clazz) {
+	public Method getInvokenMethod(Class<reflectSimpleDemo> clazz) {
 		Method method = null;
 		try {
 			method = clazz.getDeclaredMethod("invokeFunction", Class.class,
@@ -27,7 +27,7 @@ public class reflectMain {
 		return method;
 	}
 
-	public void invokenFun(Class<callFunction> callClass, Method method,
+	public void invokenFun(Class<reflectSimpleDemo> callClass, Method method,
 			Class<?> invokenClass, String invokenFunName, Boolean isPrivate,
 			Object... params) {
 		try {
@@ -46,7 +46,7 @@ public class reflectMain {
 
 	public static void main(String[] args) {
 		// 通过反射调用反射Demo
-		Class<callFunction> clazz = callFunction.class;
+		Class<reflectSimpleDemo> clazz = reflectSimpleDemo.class;
 		Method method = null;
 		try {
 			method = clazz.getDeclaredMethod("invokeFunction", Class.class,
